@@ -456,7 +456,7 @@ void Chip_Initialize(Chip_Exec_Context* ctx) {
   
   memmove(&ctx->memory[0], font, sizeof(font));
   
-  //Audio_Init(ctx);
+  Audio_Init(ctx);
 }
 
 void Chip_Step(Chip_Exec_Context* ctx) {
@@ -535,5 +535,5 @@ void Chip_Tick(Chip_Exec_Context* ctx, f32 dt) {
 
 void Chip_Free(Chip_Exec_Context* ctx) {
   // Nop
-  //Audio_Free(ctx);
+  Audio_Free(ctx);
 }
